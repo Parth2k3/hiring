@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<div style="max-width: 800px; margin: 20px auto;">
+    <h2>{% trans "FAQ Preview" %}</h2>
+    
+    {% for lang_code, lang_name in languages %}
+    <div style="margin-bottom: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+        <h3>{{ lang_name }}</h3>
+        
+        <div class="question">
+            <strong>{% trans "Question" %}:</strong>
+            <p>{{ faq.get_translated_question|default:faq.question }}</p>
+        </div>
+        
+        <div class="answer">
+            <strong>{% trans "Answer" %}:</strong>
+            <div>{{ faq.get_translated_answer|default:faq.answer|safe }}</div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div style="margin-top: 20px;">
+        <a href="{% url 'admin:your_app_faq_change' faq.id %}" 
+           class="button">{% trans "Back to Edit" %}</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+/* Custom styling for the admin interface */
+.field-translated_status {
+    white-space: nowrap;
+}
+
+.translation-status {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.status-complete {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.status-incomplete {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* Fieldset styling */
+.module h2 {
+    background: #79aec8;
+    padding: 8px;
+    color: white;
+}
+
+/* Preview button styling */
+.preview-button {
+    margin-left: 10px;
+    background: #417690;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.preview-button:hover {
+    background: #2b5173;
+}
