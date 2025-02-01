@@ -26,3 +26,7 @@ A multilingual FAQ management system built with Django REST Framework, supportin
 ```bash
 git clone https://github.com/Parth2k3/hiring.git
 cd backend
+```
+2. Run the docker-compose file
+```bash
+docker-compose up --build
